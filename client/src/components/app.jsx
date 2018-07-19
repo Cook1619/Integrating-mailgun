@@ -10,6 +10,7 @@ import BlogList from './BlogList';
 import SingleBlog from './Admin/SingleBlog';
 import AdminHome from './Admin/AdminHome';
 import Donate from './donate';
+import Contact from './contact'
 
 class Navigation extends Component {
 
@@ -21,6 +22,7 @@ class Navigation extends Component {
                         <Link to="/goodbye">Goodbye</Link>
                         <Link to="/blogs">Blogs</Link>
                         <Link to="/admin">Admin Login</Link>
+                        <Link to="/contact">Contact Us</Link>
                     </nav>
                     <AuthButton />
                     <Switch>
@@ -29,6 +31,7 @@ class Navigation extends Component {
                         <Route path="/logout" component={Logout} />
                         <Route path="/donate" component={Donate} />
                         <Route path="/blogs" component={BlogList} />
+                        <Route path="/contact" component={Contact} />
                         <PrivateRoute path="/goodbye" component={GoodbyeWorld} />
                         <PrivateRoute path="/admin" component={AdminHome} />
                         <PrivateRoute path="/:id" component={SingleBlog} />
